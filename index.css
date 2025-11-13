@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: hsl(var(--cream));
+  /*display: flex;                /* enable flexbox */
+  //*align-items: center;          /* center vertically */
+  /*justify-content: center;    /* center horizontally */
+}
+
+:root {
+  --black: 212, 21%, 14%;
+  --grey: 228, 12%, 48%;
+  --cream: 30, 38%, 92%;
+  --white: 0, 0%, 100%;
+  --green: 158, 36%, 37%;
+  --dark-green: 158, 42%, 18%;
+  --ff-montserrat: "Montserrat", serif;
+  --ff-fraunces: "Fraunces", serif;
+  --fs: 14px;
+  --fw-bold: 700;
+  --fw-semibold: 500;
+}
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+.uppercase { text-transform: uppercase; }
+
+.ff-montserrat{font-family: var(--ff-montserrat);}
+.ff-fraunces{font-family:var(--ff-fraunces) ;}
+
+.fs{font-size: var(--fs);}
+
+.fw-bold{font-weight: 700;}
+.fw-semibold{font-weight: 500}
+
+.text-white{color:hsl(var(--white)) ;}
+.text-black{color:hsl(var(--black));}
+.text-green{ color: hsl(var(--green));}
+.text-grey{ color: hsl(var(--grey));}
+.text-darkgreen{color: hsl(var(--dark-green));}
+.bg-green{background-color: hsl(var(--green));}
+
+
+.container{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.card {
+  width: 400px;
+  height: 300px;
+  border-radius:5px;
+  background-color: hsl(var(--white));
+ 
+}
+.flex{
+  display: flex;
+}
+.img{
+width: 50%;
+background: url(./images/image-product-desktop.jpg);
+background-size: cover;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+
+}
+.content{
+  padding: 22px 20px;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%
+}
+.content h2{
+  line-height: 1.1;
+}
+.add-btn{
+  padding: 8px 2px;
+  margin-top: 10px;
+  border: none;
+  font-size: 10px;
+ position: relative;
+ border-radius:5px ;
+}
+.add-btn:active{
+  background-color:hsl(var(--dark-green)) ;
+  cursor: pointer;
+}
+.add-btn:hover{
+  cursor: pointer;
+}
+button>img{
+width: 10px;
+height: 10px;
+}
+.line-through{text-decoration: line-through;}
+@media (min-width: 45em) {
+  .container{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+  }
+}
