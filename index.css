@@ -30,6 +30,8 @@ font-size: 14px;
 main { padding: 1rem; }
 
 .card {
+width: 36rem;
+height: 27rem;
 display: grid;
 grid-template-columns: 1fr 1fr;
 max-width: 600px;
@@ -40,8 +42,10 @@ box-shadow: 0 2px 20px rgba(0,0,0,.05);
 }
 
 .card__media {
-background: url(./images/image-product-desktop.jpg) center/cover no-repeat;
-min-height: 240px;
+min-height: 14rem;
+background: url(./images/image-product-desktop.jpg);
+background-size: cover;
+
 }
 
 .card__body {
@@ -112,11 +116,12 @@ font-size: .9rem;
 .card {
 grid-template-columns: 1fr;
 max-width: 340px;
+height: 100%;
 }
-.card__media {
-background-image: url(./images/image-product-mobile.jpg);
-min-height: 220px;
-}
+  .card__media { min-height: 200px; 
+  background-size: cover;
+ aspect-ratio: 16/16;
+} 
 }
 
 
