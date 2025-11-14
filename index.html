@@ -1,51 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="index.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Product preview card component</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lavishly+Yours&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lavishly+Yours&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-  
-  <title>Frontend Mentor | Product preview card component</title>
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <main>
-    <div class="container">
-       <div class="card flex ">
-          <div class="img ">
-          
-         </div>
-         <div class="content flex" >
-             <p style="font-size: 7px;" class="text-grey fs ff-montserrat uppercase letter-spacing-1">Perfume</p> 
-
-              <h2 class="ff-fraunces fw-bold ">Gabrielle Essence Eau De Parfum</h2>
-
-              <p  style="font-size: 10px;"  class="text-grey fs ff-montserrat ">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-              Perfumer-Creator for the House of CHANEL.</p>
-
-             <p class="flex"  style="gap: 10px; justify-content: center;
-             align-items: center;
-             margin-top:15px ;
-             margin-left: -20px;
-             "><span style="font-size: 20px;" class="text-green fw-bold ff-fraunces "> $149.99</span>
-              <span style="font-size: 10px;" class="line-through ff-fraunces text-grey">$169.99</span></p>
-
-              <button class=" add-btn bg-green text-white ff-montserrat fw-semibold"><img src="images/icon-cart.svg">    Add to Cart</button>
-              
+    <article class="card" aria-labelledby="product-title" aria-describedby="product-desc product-price">
+      <div class="card__media" role="img" aria-label="Gabrielle Essence Eau De Parfum bottle"></div>
+      <div class="card__body">
+        <p class="eyebrow">Perfume</p>
+        <h1 id="product-title" class="title">Gabrielle Essence Eau De Parfum</h1>
+        <p id="product-desc" class="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+        <div id="product-price" class="price-row">
+          <span class="price">$149.99</span>
+          <span class="price--old">$169.99</span>
+        </div>
+        <button class="add-btn" type="button">
+          <img src="images/icon-cart.svg" alt="" aria-hidden="true"> Add to Cart
+        </button>
       </div>
-      </div>
-    
-   
+    </article>
   </main>
-
-  
 </body>
 </html>
