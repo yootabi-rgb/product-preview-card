@@ -1,108 +1,122 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  height: 100vh;
-  background-color: hsl(var(--cream));
-  /*display: flex;                /* enable flexbox */
-  //*align-items: center;          /* center vertically */
-  /*justify-content: center;    /* center horizontally */
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 :root {
-  --black: 212, 21%, 14%;
-  --grey: 228, 12%, 48%;
-  --cream: 30, 38%, 92%;
-  --white: 0, 0%, 100%;
-  --green: 158, 36%, 37%;
-  --dark-green: 158, 42%, 18%;
-  --ff-montserrat: "Montserrat", serif;
-  --ff-fraunces: "Fraunces", serif;
-  --fs: 14px;
-  --fw-bold: 700;
-  --fw-semibold: 500;
+--black: 212, 21%, 14%;
+--grey: 228, 12%, 48%;
+--cream: 30, 38%, 92%;
+--white: 0, 0%, 100%;
+--green: 158, 36%, 37%;
+--dark-green: 158, 42%, 18%;
 }
 
-.letter-spacing-1 { letter-spacing: 4.75px; } 
-.letter-spacing-2 { letter-spacing: 2.7px; } 
-.letter-spacing-3 { letter-spacing: 2.35px; } 
-.uppercase { text-transform: uppercase; }
-
-.ff-montserrat{font-family: var(--ff-montserrat);}
-.ff-fraunces{font-family:var(--ff-fraunces) ;}
-
-.fs{font-size: var(--fs);}
-
-.fw-bold{font-weight: 700;}
-.fw-semibold{font-weight: 500}
-
-.text-white{color:hsl(var(--white)) ;}
-.text-black{color:hsl(var(--black));}
-.text-green{ color: hsl(var(--green));}
-.text-grey{ color: hsl(var(--grey));}
-.text-darkgreen{color: hsl(var(--dark-green));}
-.bg-green{background-color: hsl(var(--green));}
-
-
-.container{
-  display: flex;
-  justify-items: center;
-  align-items: center;
+html, body {
+height: 100%;
 }
+
+body {
+min-height: 100vh;
+background-color: hsl(var(--cream));
+display: grid;
+place-items: center;
+color: hsl(var(--black));
+font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+font-size: 14px;
+}
+
+main { padding: 1rem; }
 
 .card {
-  width: 400px;
-  height: 300px;
-  border-radius:5px;
-  background-color: hsl(var(--white));
- 
+display: grid;
+grid-template-columns: 1fr 1fr;
+max-width: 600px;
+background-color: hsl(var(--white));
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 2px 20px rgba(0,0,0,.05);
 }
-.flex{
-  display: flex;
-}
-.img{
-width: 50%;
-background: url(./images/image-product-desktop.jpg);
-background-size: cover;
-border-top-left-radius: 5px;
-border-bottom-left-radius: 5px;
 
+.card__media {
+background: url(./images/image-product-desktop.jpg) center/cover no-repeat;
+min-height: 240px;
 }
-.content{
-  padding: 22px 20px;
-  flex-direction: column;
-  gap: 10px;
-  width: 50%
+
+.card__body {
+padding: 1.5rem;
+display: grid;
+gap: .75rem;
 }
-.content h2{
-  line-height: 1.1;
+
+.eyebrow {
+text-transform: uppercase;
+letter-spacing: .4rem;
+color: hsl(var(--grey));
+font-weight: 500;
+font-size: .7rem;
 }
-.add-btn{
-  padding: 8px 2px;
-  margin-top: 10px;
-  border: none;
-  font-size: 10px;
- position: relative;
- border-radius:5px ;
+
+.title {
+font-family: "Fraunces", Georgia, serif;
+font-weight: 700;
+line-height: 1.1;
+font-size: 1.6rem;
 }
-.add-btn:active{
-  background-color:hsl(var(--dark-green)) ;
-  cursor: pointer;
+
+.description {
+color: hsl(var(--grey));
+font-size: .9rem;
 }
-.add-btn:hover{
-  cursor: pointer;
+
+.price-row {
+display: flex;
+align-items: center;
+gap: 1rem;
+margin-top: .5rem;
 }
-button>img{
-width: 10px;
-height: 10px;
+
+.price {
+color: hsl(var(--green));
+font-family: "Fraunces", Georgia, serif;
+font-weight: 700;
+font-size: 1.8rem;
 }
-.line-through{text-decoration: line-through;}
-@media (min-width: 45em) {
-  .container{
-   display: flex;
-   flex-direction: column;
-   flex-wrap: wrap;
-  }
+
+.price--old {
+color: hsl(var(--grey));
+text-decoration: line-through;
+font-size: .85rem;
 }
+
+.add-btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: .5rem;
+width: 100%;
+padding: .75rem 1rem;
+background-color: hsl(var(--green));
+color: hsl(var(--white));
+border: none;
+border-radius: 8px;
+font-weight: 700;
+font-size: .9rem;
+}
+.add-btn:hover { cursor: pointer; }
+.add-btn:active { background-color: hsl(var(--dark-green)); }
+.add-btn img { width: 14px; height: 14px; }
+
+@media (max-width: 640px) {
+.card {
+grid-template-columns: 1fr;
+max-width: 340px;
+}
+.card__media {
+background-image: url(./images/image-product-mobile.jpg);
+min-height: 220px;
+}
+}
+
+
